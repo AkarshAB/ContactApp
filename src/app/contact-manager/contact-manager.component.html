@@ -1,0 +1,66 @@
+Login Details : {{loginDate|date:'short'}}
+<div class="container">
+  <div class="row">
+    <div class="col text-center">
+      <h1>CONTACT MANAGEMENT SYSTEM</h1>
+      <p>Get rid of the clutter and embrace simplicity with our contact management system. No more messy spreadsheets or
+        scattered notes. Keep all your contacts neatly organized, easily accessible, and ready to connect with at a
+        moment's notice.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-3">
+      <!-- search -->
+      <input (keyup) = "search($event)" type="text" class="form-control" name="" id="" placeholder="Search Contact">
+    </div>
+    <div class="col-2">
+      <button class="btn btn-outline-secondary">Search</button>
+    </div>
+    <div class="col-3"></div>
+    <div class="col-3 text-end"><button class="btn btn-outline-secondary" routerLink="/contactManager/addContact">Add Contact</button></div>
+  </div>
+
+  <!-- {{heading}} -->
+  <!-- {{allContacts|json}} -->
+
+  <div class="row">
+    <div class="col-6 card justify-content-center my-3 shadow" *ngFor="let contact of allContacts |filter:searchKey:'name'">
+      <!-- ngFor repeats the code inside the tags -->
+      <div class="row align-items-center">
+        <div class="col-6 py-3">
+          <img
+            [src]='contact.photourl'
+            alt="" width="200px" height="200px" class="border">
+        </div>
+        <div class="col-6">
+          <ol class="list-group list-group-numbered">
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Name</div>
+                {{contact.name}}
+              </div>
+              <span class="badge bg-secondary rounded-pill"><a routerLink="/contactManager/viewContact/{{contact.id}}"><i class="fa-solid fa-eye"></i></a></span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Phone No</div>
+                {{contact.phone}}
+              </div>
+              <span class="badge bg-secondary rounded-pill"><a routerLink ="/contactManager/editContact/{{contact.id}}"><i class="fa-solid fa-pen"></i></a></span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">E Mail</div>
+                {{contact.email}}
+              </div>
+              <span (click)="deleteContact(contact.id)" class="badge bg-secondary rounded-pill"><a href=""><i class="fa-solid fa-trash"></i></a></span>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6"></div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "name": "Akarsh A B",
+      "email": "akarshab361@gmail.com",
+      "phone": 8921400258,
+      "photourl": "https://www.freeiconspng.com/uploads/human-icon-png-png-20.png",
+      "company": "XYZ Company",
+      "title": "HR",
+      "groupid": 1
+    },
+    {
+      "groupid": "1",
+      "id": "aaa",
+      "name": "aazzz",
+      "photourl": "https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Ym9va3xlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80",
+      "email": "aaaa",
+      "phone": "aaaa",
+      "company": "aaa",
+      "title": "aa"
+    }
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "name": "Company"
+    },
+    {
+      "id": 2,
+      "name": "Family"
+    },
+    {
+      "id": 3,
+      "name": "Friend"
+    }
+  ]
+}

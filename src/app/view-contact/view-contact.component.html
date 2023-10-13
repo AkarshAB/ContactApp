@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row mt-5 mb-5">
+    <div class="col-6">
+      <!-- details -->
+      <ul class="list-group">
+        <li class="list-group-item bg-secondary text-light" aria-current="true">Full Name: {{contact.name}}</li>
+        <li class="list-group-item">E-mail: {{contact.email}}</li>
+        <li class="list-group-item">Mobile: {{contact.phone}}</li>
+        <li class="list-group-item">Company: {{contact.company}}</li>
+        <li class="list-group-item">Title: {{contact.title}}</li>
+        <li class="list-group-item">Group: {{groupName}}</li>
+      </ul>
+
+      <!-- button - redirect to main page -->
+      <div class="text-center">
+        <button class="btn btn-outline-secondary my-3" routerLink="/contactManager">Go Back</button>
+      </div>
+    </div>
+    <div class="col-6 text-center">
+      <!-- image -->
+      <img width="250px" height="250px" src="https://www.freeiconspng.com/uploads/human-icon-png-png-20.png" alt="">
+
+    </div>
+  </div>
+</div>

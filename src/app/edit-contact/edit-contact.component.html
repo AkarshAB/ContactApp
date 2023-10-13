@@ -1,0 +1,61 @@
+{{contact |json}}
+<div class="container">
+  <div class="row">
+    <h1 class="text-center my-3">Edit Contact Details</h1>
+    <div class="col-6">
+      <!-- form -->
+      <div class="form-floating mb-3">
+        <input [(ngModel)] = "contact.name" name="name" type="text" class="form-control" id="floatingInput" placeholder="Full Name">
+        <label for="floatingInput">Full Name</label>
+      </div>
+
+      <!-- photo URl -->
+      <div class="form-floating mb-3">
+        <input [(ngModel)] = "contact.photourl" name="photourl" type="text" class="form-control" id="floatingPhoto" placeholder="Photo Url">
+        <label for="floatingPhoto">Photo Url</label>
+      </div>
+
+      <!-- email -->
+      <div class="form-floating mb-3">
+        <input [(ngModel)] = "contact.email" name="email" type="email" class="form-control" id="floatingEmail" placeholder="name@example.com">
+        <label for="floatingEmail">Email address</label>
+      </div>
+
+      <!-- Mobile No -->
+      <div class="form-floating mb-3">
+        <input [(ngModel)] = "contact.phone" name="phone" type="text" class="form-control" id="floatingMobile" placeholder="Mobile No">
+        <label for="floatingMobile">Mobile</label>
+      </div>
+
+      <!-- CompanyName -->
+      <div class="form-floating mb-3">
+        <input [(ngModel)] = "contact.company" name="company" type="text" class="form-control" id="floatingCompany" placeholder="Company Name">
+        <label for="floatingCompany">Company Name</label>
+      </div>
+
+      <!-- Title -->
+      <div class="form-floating mb-3">
+        <input [(ngModel)] = "contact.title" name="title" type="text" class="form-control" id="floatingTitle" placeholder="Title">
+        <label for="floatingTitle">Title</label>
+      </div>
+
+      <!-- group -->
+      <div class="mb-3">
+        <select [(ngModel)] = "contact.groupid" name="groupid" id="" class="form-control">
+          <option value="" selected hidden disabled>Select Circle</option>
+          <option [value]="grp.id" *ngFor="let grp of groups">{{grp.name}}</option>
+        </select>
+      </div>
+
+      <!-- button -->
+      <div class="text-center mb-3">
+        <button (click)="updateContact()" class="btn btn-outline-secondary" routerLink="/contactManager">Submit</button>
+      </div>
+
+    </div>
+    <div class="col-6 text-center">
+      <!-- image -->
+      <img width="100%" height="500px" [src]="contact.photourl" alt="">
+    </div>
+  </div>
+</div>
